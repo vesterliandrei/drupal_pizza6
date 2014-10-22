@@ -4,6 +4,7 @@ drupal_pizza6
 Drupal Pizza #6 : Hacking your data into Views (Andrei Vesterli)
 
 Here you can find some additional documentation regarding views handlers :
+
 1. https://api.drupal.org/api/views/views.api.php/group/views_handlers/7
 
 2. https://gist.github.com/juampy72/5816530
