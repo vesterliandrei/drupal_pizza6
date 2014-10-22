@@ -15,4 +15,5 @@ Here you can find some additional documentation regarding views handlers :
 
 
 Author : Vesterli Andrei
+
 Email  : vesterli.andrei@gmail.com
