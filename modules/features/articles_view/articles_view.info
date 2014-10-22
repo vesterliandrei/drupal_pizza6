@@ -1,0 +1,11 @@
+name = Articles view
+description = Export Articles view
+core = 7.x
+package = Features
+version = 7.x-1.0
+project = articles_view
+dependencies[] = views
+features[ctools][] = views:views_default:3.0
+features[features_api][] = api:2
+features[views_view][] = articles
+features_exclude[dependencies][ctools] = ctools
