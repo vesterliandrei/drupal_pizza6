@@ -1,0 +1,33 @@
+<?php
+
+/**
+ * @file
+ * Install file for node_like module.
+ */
+
+/**
+ * Implements hook_schema().
+ */
+function node_like_schema() {
+
+  $schema['node_like'] = array(
+    // Create schema for "node_like" table.
+    'description' => 'Table which contains node like ammount.',
+    'fields' => array(
+      'nid' => array(
+        'description' => 'The node id of the node was liked.',
+        'type' => 'int',
+        'not null' => TRUE,
+        'default' => 0,
+      ),
+      'date' => array(
+        'description' => 'The date when a node was liked.',
+        'type' => 'int',
+        'not null' => TRUE,
+        'default' => 0,
+      ),
+    ),
+  );
+
+  return $schema;
+}

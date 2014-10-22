@@ -1,0 +1,11 @@
+name = Node Like
+description = Adds the possibility to like a node for each CT.
+package = Custom
+core = 7.x
+
+dependencies[] = views_ui
+dependencies[] = views
+
+files[] = includes/node_like_handler_field.inc
+files[] = includes/node_like_handler_filter.inc
+files[] = includes/node_like_handler_sort.inc

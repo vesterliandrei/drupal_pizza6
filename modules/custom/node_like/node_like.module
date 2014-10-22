@@ -1,0 +1,66 @@
+<?php
+
+/**
+ * @file
+ * Main file for node_like module.
+ */
+
+/**
+ * Implements hook_permission().
+ */
+function node_like_permission() {
+  return array(
+    'administer node like' => array(
+      'title' => t('Administer Node Like'),
+      'description' => t('Administer Node Like module.'),
+    ),
+  );
+}
+
+/**
+ * Implements hook_menu().
+ */
+function node_like_menu() {
+  $items = array();
+
+  $items['admin/config/node_like'] = array(
+    'title' => 'Node Like',
+    'description' => 'Settings related to Node Like module.',
+    'position' => 'left',
+    'weight' => -16,
+    'page callback' => 'system_admin_menu_block_page',
+    'access arguments' => array('access administration pages'),
+    'file' => 'system.admin.inc',
+  );
+
+  $items['admin/config/node_like/config'] = array(
+    'title' => 'Configure Node Like',
+    'description' => 'Configure which CTs will be available for liking.',
+    'page callback' => 'drupal_get_form',
+    'page arguments' => array('node_like_config'),
+    'access arguments' => array('administer node like'),
+    'type' => MENU_NORMAL_ITEM,
+  );
+
+  return $items;
+}
+
+/**
+ * Implements hook_views_api().
+ */
+function node_like_views_api() {
+  return array(
+    'version' => '3.0',
+    'path' => drupal_get_path('module', 'node_like'),
+  );
+}
+
+function node_like_config() {
+  $form = array();
+
+  $form['test'] = array(
+    '#markup' => 'test'
+  );
+
+  return $form;
+}
